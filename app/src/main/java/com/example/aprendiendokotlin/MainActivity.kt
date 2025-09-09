@@ -9,6 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import android.util.Log
 import RetoCursoBot.App
 import RetoCursoBot.Persona
+import kotlin.collections.MutableList
 
 val TAG = ":::TAG"
 class MainActivity : AppCompatActivity() {
@@ -34,15 +35,21 @@ class MainActivity : AppCompatActivity() {
             hobbies = arrayListOf("Leer", "Correr", "Viajar", "Programar")
         )
         app.botDeSeguridad(persona,persona2)
+        listasEjercicio1()
 
 
 
 
 
     }
+    private fun listasEjercicio1(){
+        val greenNumbers = listOf(1, 4, 23)
+        val redNumbers = listOf(17, 2)
+        Log.d(TAG,(greenNumbers.count() + redNumbers.count()).toString())
+    }
     private fun variablesYConstantes(){
         var name = "Rodrigo"
-        Log.d(TAG, "Hola"+name)
+        Log.d(TAG, "Hola $name")
         Log.d(TAG, "Hola")
         // val para constantes var para valirables
     }
@@ -222,6 +229,8 @@ class MainActivity : AppCompatActivity() {
 
         var arrayList = arrayListOf<String>()
 
+        var arrayConMutable: MutableList<Int>
+
         var myList = listOf<String>("Rodrigo","Raquel")
         var myArrayList = arrayListOf<String>("Rodrigo","Raquel")
 
@@ -281,6 +290,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 
 
 
